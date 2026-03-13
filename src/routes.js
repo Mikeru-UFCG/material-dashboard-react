@@ -37,15 +37,9 @@ Coded by www.creative-tim.com
 
 // Material Dashboard 2 React layouts
 import Dashboard from "layouts/dashboard";
-import Tables from "layouts/tables";
-import Billing from "layouts/billing";
-import RTL from "layouts/rtl";
-import Notifications from "layouts/notifications";
-import Profile from "layouts/profile";
-import SignIn from "layouts/authentication/sign-in";
-import SignUp from "layouts/authentication/sign-up";
+import Alunos from "layouts/alunos";
+import Disciplinas from "layouts/disciplinas";
 
-// @mui icons
 import Icon from "@mui/material/Icon";
 
 const routes = [
@@ -56,15 +50,23 @@ const routes = [
     icon: <Icon fontSize="small">dashboard</Icon>,
     route: "/dashboard",
     component: <Dashboard />,
-    },
-    {
+  },
+  {
     type: "collapse",
     name: "Alunos",
     key: "alunos",
     icon: <Icon fontSize="small">person</Icon>,
     route: "/alunos",
     component: <Alunos />,
-    },
+  },
+  {
+    type: "collapse",
+    name: "Disciplinas",
+    key: "disciplinas",
+    icon: <Icon fontSize="small">menu_book</Icon>,
+    route: "/disciplinas",
+    component: <Disciplinas />,
+  },
 ];
 
 export default routes;
